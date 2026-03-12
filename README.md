@@ -1,95 +1,155 @@
-# Smart-Digital-Platform-to-Promote-Eco-Cultural-Tourism-in-Jharkhand
-A smart web platform developed for the Hackathon to promote eco and cultural tourism in Jharkhand. The platform features an interactive tourism map, multilingual content, user reviews, and an AI-powered itinerary generator that helps travelers discover destinations and plan personalized trips.
-# Smart Digital Platform for Eco & Cultural Tourism in Jharkhand
+# EcoTour Jharkhand
 
-## Overview
+A responsive web platform for promoting eco and cultural tourism in Jharkhand, India. Built for the Smart India Hackathon.
 
-This project is a web-based platform developed for the  Hackathon under the Smart Cities theme. The platform aims to promote eco-tourism and tribal cultural heritage in Jharkhand by providing an interactive and centralized digital experience for travelers.
+## Features
 
-Jharkhand has many beautiful natural destinations such as waterfalls, wildlife sanctuaries, forests, and tribal cultural sites. However, these destinations remain largely undiscovered due to the lack of a unified digital platform. This project solves that problem by building a smart tourism portal that helps users explore destinations, read reviews, view interactive maps, and generate AI-powered travel itineraries.
+- 🗺️ **Interactive Tourism Map** - Explore destinations across Jharkhand with our interactive map
+- 🌐 **Multilingual Support** - Available in English and Hindi
+- 📱 **Mobile Responsive** - Works perfectly on all devices
+- ⭐ **User Reviews & Ratings** - Share your experiences with other travelers
+- 🤖 **AI-Powered Itinerary Generator** - Plan your trip based on your interests and preferences
+- 🏛️ **Destination Pages** - Detailed information with images and cultural context
 
-## Key Features
+## Tech Stack
 
-### Interactive Tourism Map
+### Frontend
+- React 18 with Vite
+- React Router DOM
+- i18next for internationalization
+- Axios for API calls
 
-The platform provides an interactive map displaying major eco-tourism and cultural destinations across Jharkhand. Users can click on locations to view detailed information about the place, including images, activities, and nearby attractions.
+### Backend
+- Node.js with Express
+- MongoDB with Mongoose
 
-### Multilingual Support
+## Project Structure
 
-The website supports multiple languages such as English and Hindi to make tourism information accessible to a wider audience.
+```
+ecotour-jharkhand/
+├── client/                 # React Frontend
+│   ├── src/
+│   │   ├── components/    # Reusable components
+│   │   ├── pages/         # Page components
+│   │   ├── services/      # API services
+│   │   ├── App.jsx        # Main app component
+│   │   ├── index.css      # Global styles
+│   │   └── i18n.js       # Internationalization config
+│   └── package.json
+├── server/                 # Node.js Backend
+│   ├── config/            # Database config
+│   ├── controllers/       # Route controllers
+│   ├── models/           # Mongoose models
+│   ├── routes/           # API routes
+│   ├── middleware/       # Auth middleware
+│   ├── seed/            # Seed data
+│   └── package.json
+├── SPEC.md               # Project specification
+└── README.md
+```
 
-### Destination Information
+## Getting Started
 
-Each destination includes detailed descriptions, cultural background, travel highlights, and recommended activities.
+### Prerequisites
 
-### User Review System
+- Node.js (v14 or higher)
+- MongoDB (local or cloud instance)
+- npm or yarn
 
-Tourists can share their experiences by submitting reviews and ratings. This helps other users make better travel decisions.
+### Backend Setup
 
-### AI-Powered Itinerary Generator
+1. Navigate to the server directory:
+```bash
+cd server
+```
 
-The system includes an AI-based travel planner that generates personalized travel itineraries based on:
+2. Install dependencies:
+```bash
+npm install
+```
 
-* Travel duration
-* User interests (nature, wildlife, culture, waterfalls)
-* Budget preferences
+3. Create a `.env` file in the server directory:
+```env
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/ecotour-jharkhand
+JWT_SECRET=your_secret_key_here
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+```
 
-The AI suggests the best sequence of destinations and generates a day-by-day travel plan.
+4. Start the backend server:
+```bash
+npm start
+```
 
-### Tourism Search and Filter
+The server will run on http://localhost:5000
 
-Users can easily search and filter destinations by category, district, or popularity.
+### Frontend Setup
 
-## Technology Stack
+1. Navigate to the client directory:
+```bash
+cd client
+```
 
-Frontend
+2. Install dependencies:
+```bash
+npm install
+```
 
-* HTML
-* CSS
-* JavaScript
-* React.js
+3. Start the development server:
+```bash
+npm run dev
+```
 
-Backend
+The frontend will run on http://localhost:3000
 
-* Node.js / Python Flask
+## API Endpoints
 
-Database
+### Destinations
+- `GET /api/destinations` - Get all destinations
+- `GET /api/destinations/:id` - Get destination by ID
+- `GET /api/destinations/featured/list` - Get featured destinations
+- `GET /api/destinations/category/:category` - Filter by category
 
-* MongoDB
+### Reviews
+- `GET /api/reviews` - Get all reviews
+- `GET /api/reviews/destination/:id` - Get reviews for a destination
+- `POST /api/reviews` - Create a review (requires auth)
+- `PUT /api/reviews/:id` - Update a review
+- `DELETE /api/reviews/:id` - Delete a review
 
-APIs
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login user
+- `GET /api/auth/profile` - Get user profile (requires auth)
 
-* Google Maps API
+### Itinerary
+- `POST /api/itinerary/generate` - Generate AI-powered itinerary
 
-AI Module
+## Environment Variables
 
-* Python
-* Pandas
-* Scikit-learn
+### Server (.env)
+```
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/ecotour-jharkhand
+JWT_SECRET=your_secret_key
+GOOGLE_MAPS_API_KEY=your_google_maps_key
+```
 
-## System Workflow
+### Client (.env)
+```
+VITE_API_URL=http://localhost:5000/api
+```
 
-1. Users visit the platform and explore tourism destinations through an interactive map.
-2. They can filter locations based on interests such as eco-tourism, wildlife, or cultural tourism.
-3. Users can read reviews and detailed descriptions of destinations.
-4. The AI itinerary generator creates personalized travel plans based on user preferences.
+## License
 
-## Impact
+MIT License
 
-This platform helps:
+## Authors
 
-* Promote eco-tourism in Jharkhand
-* Showcase tribal culture and heritage
-* Increase tourism awareness
-* Support local communities and tourism businesses
+- Smart India Hackathon Team
 
-## Future Enhancements
+## Acknowledgments
 
-* AI chatbot tourist guide
-* Hotel and guide booking integration
-* AR/VR virtual tourism experiences
-* Real-time weather and travel alerts
+- Unsplash for images
+- Jharkhand Tourism Department for inspiration
 
-## Project Team
-
-Developed as part of the Smart India Hackathon under the Smart Cities problem statement.
