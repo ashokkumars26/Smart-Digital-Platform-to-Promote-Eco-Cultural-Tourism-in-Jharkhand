@@ -4,7 +4,7 @@ A smart web platform developed for the Hackathon to promote eco and cultural tou
 
 ## Overview
 
-This project is a web-based platform developed for the Smart India Hackathon under the Smart Cities theme. The platform aims to promote eco-tourism and tribal cultural heritage in Jharkhand by providing an interactive and centralized digital experience for travelers.
+This project is a web-based platform developed for the  Hackathon under the Smart Cities theme. The platform aims to promote eco-tourism and tribal cultural heritage in Jharkhand by providing an interactive and centralized digital experience for travelers.
 
 Jharkhand has many beautiful natural destinations such as waterfalls, wildlife sanctuaries, forests, and tribal cultural sites. However, these destinations remain largely undiscovered due to the lack of a unified digital platform. This project solves that problem by building a smart tourism portal that helps users explore destinations, read reviews, view interactive maps, and generate AI-powered travel itineraries.
 
